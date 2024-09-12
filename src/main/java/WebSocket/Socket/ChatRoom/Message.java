@@ -8,7 +8,6 @@ public class Message {
     private String name;
     private String message;
     private LocalDateTime localDateTime;
-    private List<String> nameList;
 
     public Message() {
     }
@@ -21,9 +20,6 @@ public class Message {
         return message;
     }
 
-    public List<String> getNameList() {
-        return nameList;
-    }
 
     public LocalDateTime getLocalDateTime() {
         return localDateTime;
@@ -38,9 +34,7 @@ public class Message {
     }
 
 
-    public void setNameList(List<String> nameList) {
-        this.nameList = nameList;
-    }
+
 
     public void setLocalDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;

@@ -16,17 +16,16 @@ public class ChatController {
     @MessageMapping("/chat")
     @SendTo("/topic/chat")
     public Message repeatMessage(Message message) throws Exception {
-        message.setNameList(namelist);
         return message;
     }
     @MessageMapping("/name")
     @SendTo("/topic/name")
     public List<String> setName(Name name) throws Exception {
         if(name.getName().isEmpty()) namelist.add("Anonymous");
+        else if(namelist.contains(name.getName())) return namelist;
         else namelist.add(name.getName());
         return namelist;
     }
-
 
 }
 
